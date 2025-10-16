@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #FAFAF9;
+    padding: 0px 10%;
+    gap: 5vw;
+}
+
+.main-content {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-content .svg-background {
+    width: 40px;
+    height: fit-content;
+    background-color: #F5C044;
+    border-radius: 50%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.main-content .svg-background img {
+    filter: brightness(0) invert(1);
+}
+
+.main-content h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 2.25rem;
+    color: #18181B;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.25rem;
+    color: #52525A;
+    margin-bottom: 20px;
+}
+
+.main-content ul {
+    list-style: none;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.875rem;
+    color: #52525A;
+}
+
+.main-content ul li {
+    display: flex;
+    align-items: center;
+}
+
+.main-content ul li::before {
+    content: url(./resources/Done_ring_round_fill.svg);
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.cards {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cards .card-1 , .cards .card-2 {
+    width: 300px;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 20px #D4D4D8;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+    font-family: 'Sora', sans-serif;
+    font-size: 1rem;
+}
+
+.cards .card-1 {
+    align-self: flex-end;
+}
+
+.cards .card-1 h2, .cards .card-2 h2 {
+    color: #18181B;
+    margin-bottom: 10px;
+}
+
+.cards .card-1 p , .cards .card-2 p {
+    color: #52525A;
+}
+
+.cards .card-1 .images, .cards .card-2 .images {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cards .card-1 .images > img, .cards .card-2 .images > img {
+    width: 40%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.cards .card-1 .images .golden-star, .cards .card-2 .images .golden-star {
+    width: 60%;
+    height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 5%;
+        gap: 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        height: auto;
+        padding: 40px 20%;
+        gap: 40px;
+    }
+
+    .cards .card-1, .cards .card-2 {
+        width: 400px;
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .cards {
+        width: 100%;
+        height: auto;
+        padding: 40px 0px;
+        gap: 40px;
+    }
+
+    .cards .card-1, .cards .card-2 {
+        width: 100%;
+        padding: 20px;
+    }
+}
